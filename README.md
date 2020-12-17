@@ -3,6 +3,8 @@ An OpenShift Template to run a distribution of Coder's [Visual Studio Code in br
 
 Based on [https://github.com/sr229/code-server-openshift](https://github.com/sr229/code-server-openshift) and [https://github.com/codercom/code-server/releases](https://github.com/codercom/code-server/releases)
 
+Self Mod:
+    ++ add nodemon & apostrope-cli for my self.
 
 ## Docker images
 
