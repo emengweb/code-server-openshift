@@ -62,6 +62,8 @@ RUN . /etc/lsb-release && \
       openssh-client \
       default-jdk && \
     npm install -g npm && \
+    npm i -g nodemon && \
+    npm i -g apostrophe-cli && \
     apt clean && \
     rm -rf /var/lib/apt/lists/* 
 
