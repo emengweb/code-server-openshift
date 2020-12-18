@@ -41,6 +41,7 @@ RUN . /etc/lsb-release && \
     curl -sL https://deb.nodesource.com/setup_current.x | bash - && \
     apt-get upgrade -y && \
     apt-get install -y  \
+      inetutils-ping \
       sudo \
       openssl \
       net-tools \
