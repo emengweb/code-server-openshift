@@ -13,28 +13,28 @@ The `latest` tag is updated weekly using the [latest code-server release](https:
 ## Running
 ### Using Openshift CLI
 ```bash
-oc new-app -f https://raw.githubusercontent.com/jefferyb/code-server-openshift/master/code-server-openshift-template.yaml -p URL=vscode.example.com -p CODER_PASSWORD=welcome2vscode
+oc new-app -f https://raw.githubusercontent.com/emengweb/code-server-openshift/master/code-server-openshift-template.yaml -p URL=vscode.example.com -p CODER_PASSWORD=welcome2vscode
 
 # OR
 
-oc process -f https://raw.githubusercontent.com/jefferyb/code-server-openshift/master/code-server-openshift-template.yaml -p URL=vscode.example.com -p CODER_PASSWORD=welcome2vscode | oc create -f -
+oc process -f https://raw.githubusercontent.com/emengweb/code-server-openshift/master/code-server-openshift-template.yaml -p URL=vscode.example.com -p CODER_PASSWORD=welcome2vscode | oc create -f -
 
 # OR
 
-oc new-app --name=code-server --image=jefferyb/code-server -e CODER_PASSWORD=welcome2vscode
+oc new-app --name=code-server --image=emengweb/code-server -e CODER_PASSWORD=welcome2vscode
 oc create route edge code-server --insecure-policy=Redirect --service=code-server --hostname=vscode.example.com
 ```
 
 ### Using Kubernetes CLI
 ```bash
 # Deploy
-kubectl run code-server --image=jefferyb/code-server -e CODER_PASSWORD=welcome2vscode
+kubectl run code-server --image=emengweb/code-server -e CODER_PASSWORD=welcome2vscode
 ```
 
 ### Using Docker
 ```bash
 # Deploy
-docker run -itd --name code-server -e CODER_PASSWORD=welcome2vscode -p 9000:9000 -v "${PWD}:/home/coder/project" jefferyb/code-server
+docker run -itd --name code-server -e CODER_PASSWORD=welcome2vscode -p 9000:9000 -v "${PWD}:/home/coder/project" emengweb/code-server
 ```
 
 If we find `/home/coder/projects/.setup/setup-vscode` file in the container, we'll run/execute it to setup VS Code on startup. Useful when a container restarts and want to run a script to it setup automatically
@@ -47,7 +47,7 @@ If we find `/home/coder/projects/.setup/setup-vscode` file in the container, we'
    * CODER_PASSWORD=coder
    * CODER_ENABLE_AUTH=true
    * PVC_STORAGE=10Gi
-   * DOCKER_IMAGE=jefferyb/code-server:latest
+   * DOCKER_IMAGE=emengweb/code-server:latest
 
 ## Added Packages
 
