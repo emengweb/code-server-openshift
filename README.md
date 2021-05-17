@@ -1,4 +1,4 @@
-# Coder/vscode OpenShift Template 
+# Coder/vscode OpenShift Template  
 An OpenShift Template to run a distribution of Coder's [Visual Studio Code in browser](https://github.com/codercom/code-server) on your OpenShift Cluster
 
 Based on [https://github.com/sr229/code-server-openshift](https://github.com/sr229/code-server-openshift) and [https://github.com/codercom/code-server/releases](https://github.com/codercom/code-server/releases)
